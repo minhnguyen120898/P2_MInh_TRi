@@ -1,5 +1,4 @@
 import { getMovies } from "../../api/adminApi";
-import registerReducer from "../reducers/registerReducer";
 
 export const fetchMovies =   () => {
     return async (dispatch) => {

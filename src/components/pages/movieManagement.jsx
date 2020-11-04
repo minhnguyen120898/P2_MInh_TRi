@@ -13,7 +13,6 @@ function MovieManagement(props) {
     const dispatch = useDispatch();
     const history = useHistory();
 
-
     useEffect(() => {
         const action = fetchMovies();
         dispatch(action);

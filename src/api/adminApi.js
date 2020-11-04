@@ -35,3 +35,8 @@ export const deleteMovie = (id) => {
     
     return instanceAxios.delete(url);
 }
+
+export const addMovie = (movie) => {
+    const url = `/products`;
+    return instanceAxios.post(url,movie);
+}

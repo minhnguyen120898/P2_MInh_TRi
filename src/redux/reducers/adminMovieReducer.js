@@ -51,6 +51,7 @@ const moviesReducer = (state = initialState, action) => {
                 releaseDate : action.data.releaseDate,
             }
         }
+        
         default: 
             return state;
     }

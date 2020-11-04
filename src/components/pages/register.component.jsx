@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {  useHistory } from 'react-router';
+import {  Redirect, useHistory } from 'react-router';
 import Alert from 'react-bootstrap/Alert';
 import { getUser, postUserRegister } from '../../api/authApi';
 import { getAddress, getEmail, getGender, getPhone,getPassword, getName, getAll } from '../../redux/actions/registerAction';
@@ -27,6 +27,10 @@ function Register() {
         }
         dispatch(getAll(emptyUser));
     },[dispatch]);
+
+    if(localStorage.getItem("token")){
+        return <Redirect to="/"/>
+    }
 
     const onSubmit = async (e) => {
         e.preventDefault();
